@@ -1,0 +1,831 @@
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology for Intelligent Tourism (ITO)" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasTourismResource> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a tourism resource to the city where it is located" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity> <http://www.w3.org/2000/01/rdf-schema#label> "availableAtCity" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "schema:availableAtOrFrom\nhttps://schema.org/availableAtOrFrom" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a City and the Point that has the coordinates" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation> <http://www.w3.org/2000/01/rdf-schema#label> "cityLocation" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation> <http://www.w3.org/2000/01/rdf-schema#sameAs> "geo:location\n<http://www.w3.org/2003/01/geo/wgs84_pos#location>" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasTourismResource
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasTourismResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasTourismResource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasTourismResource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasTourismResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a city with a tourist resource available in it." .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasTourismResource> <http://www.w3.org/2000/01/rdf-schema#label> "hasTourismResource" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between the Point and the City that is located at the point coordinates" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#label> "isLocationOf" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The average price of a specific Tourism Resource" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice> <http://www.w3.org/2000/01/rdf-schema#label> "hasAveragePrice" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date may be used to express temporal information according to ISO 8601-1" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate> <http://www.w3.org/2000/01/rdf-schema#label> "hasDate" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "dcterms:date\n<http://purl.org/dc/terms/date>" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An unambiguous reference to the resource within a given context." .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "hasIdentifier" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "dcterms:identifier\n<http://purl.org/dc/terms/identifier>" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#range> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/2001/XMLSchema#maxInclusive> "90.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/2001/XMLSchema#minInclusive> "-90.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Latitude coordinate of a point" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#label> "hasLatitude" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#sameAs> "geo:lat\n<http://www.w3.org/2003/01/geo/wgs84_pos#lat>" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#range> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
+_:genid14 <http://www.w3.org/2001/XMLSchema#maxInclusive> "180.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid16 .
+_:genid16 <http://www.w3.org/2001/XMLSchema#minInclusive> "-180.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Longitude coordinate of a point" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#label> "hasLongitude" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#sameAs> "geo:long\n<http://www.w3.org/2003/01/geo/wgs84_pos#long>" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "A name for some thing" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "hasName" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "foaf:name\n<http://xmlns.com/foaf/0.1/name>" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The night price of a hotel" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice> <http://www.w3.org/2000/01/rdf-schema#label> "hasNightPrice" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#unionOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The offer price of a product, in this case of a specific Tourism Resource" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice> <http://www.w3.org/2000/01/rdf-schema#label> "hasPrice" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "schema:price\nhttps://schema.org/price" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the service provider, service operator, or service performer" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider> <http://www.w3.org/2000/01/rdf-schema#label> "hasProvider" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "schema:provider\n<https://schema.org/provider>" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating> <http://www.w3.org/2000/01/rdf-schema#range> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/2001/XMLSchema#maxInclusive> "5.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
+_:genid32 <http://www.w3.org/2001/XMLSchema#minInclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating> <http://www.w3.org/2000/01/rdf-schema#comment> "The average rating given by users" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating> <http://www.w3.org/2000/01/rdf-schema#label> "hasRating" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "dbpedia-owl:rating\n<http://dbpedia.org/ontology/rating>" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating> <http://www.w3.org/2000/01/rdf-schema#range> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid35 .
+_:genid35 <http://www.w3.org/2001/XMLSchema#maxInclusive> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid37 .
+_:genid37 <http://www.w3.org/2001/XMLSchema#minInclusive> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating> <http://www.w3.org/2000/01/rdf-schema#comment> "The star rating of the Hotel" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating> <http://www.w3.org/2000/01/rdf-schema#label> "hasStarRating" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "dbpedia-owl:starRating\n<http://dbpedia.org/ontology/starRating>" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a Tourist Resource has been rated above a certain value by users." .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers> <http://www.w3.org/2000/01/rdf-schema#label> "isHighlyRatedByUsers" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isTopHotel
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isTopHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isTopHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isTopHotel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isTopHotel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isTopHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a Hotel has been rated above a certain value by users and has more than a certain number of stars" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isTopHotel> <http://www.w3.org/2000/01/rdf-schema#label> "isTopHotel" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of restaurant serving Andalusian dishes" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "AndalusianRestaurant" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of natural attraction, usually related to coastal areas" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "BeachAttraction" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of hotel that is located near the beach" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel> <http://www.w3.org/2000/01/rdf-schema#label> "BeachHotel" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a means of public transport that operates on established routes" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport> <http://www.w3.org/2000/01/rdf-schema#label> "BusTransport" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of hotel designed for business professionals" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#label> "BusinessHotel" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City> <http://www.w3.org/2000/01/rdf-schema#comment> "A city is a geographical location that has associated geographical coordinates" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of attraction related to activities or spaces that promote education and the conservation of culture" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "CulturalAttraction" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of event dedicated to culture" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "CulturalEvent" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a programmed activity that takes place in a city" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of event dedicated to gastronomy" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent> <http://www.w3.org/2000/01/rdf-schema#label> "GastronomicEvent" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a tourist accommodation establishment" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> <http://www.w3.org/2000/01/rdf-schema#label> "Hotel" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of restaurant serving Italian dishes" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "ItalianRestaurant" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of restaurant serving Japanese dishes" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "JapaneseRestaurant" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of high-end hotel" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#label> "LuxuryHotel" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of restaurant serving Mediterranean dishes" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "MediterraneanRestaurant" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "It is an underground public transport system that allows you to move quickly around the city" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport> <http://www.w3.org/2000/01/rdf-schema#label> "MetroTransport" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of restaurant serving Mexican dishes" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "MexicanRestaurant" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of attraction that represents a structure of great historical, cultural or architectural importance" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "MonumentAttraction" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of attraction that represents a space dedicated to the exhibition and conservation of objects of historical, artistic or scientific value" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "MuseumAttraction" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of event dedicated to music" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent> <http://www.w3.org/2000/01/rdf-schema#label> "MusicEvent" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of attraction that represents a green area with spaces for outdoor activities" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "ParkAttraction" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A point, typically described using a coordinate system relative to Earth, such as WGS84." .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "geo:Point\nhttp://www.w3.org/2003/01/geo/wgs84_pos#Point" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a bicycle rental service for public use" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport> <http://www.w3.org/2000/01/rdf-schema#label> "PublicBicycleTransport" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "It is an establishment dedicated to the preparation and service of meals and drinks" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Restaurant" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of hotel located in rural areas" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel> <http://www.w3.org/2000/01/rdf-schema#label> "RuralHotel" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of event dedicated to sports" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent> <http://www.w3.org/2000/01/rdf-schema#label> "SportEvent" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a private transport that is contracted for a specific trip" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport> <http://www.w3.org/2000/01/rdf-schema#label> "TaxiTransport" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of event dedicated to technology" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "TechnologicalEvent" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A general class representing any type of resource or service related to tourism" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> <http://www.w3.org/2000/01/rdf-schema#label> "TourismResource" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a place of tourist interest" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "TourismAttraction" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a type of hotel oriented to tourists" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel> <http://www.w3.org/2000/01/rdf-schema#label> "TouristHotel" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a public transport on the surface that runs through dedicated lanes" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport> <http://www.w3.org/2000/01/rdf-schema#label> "TramTransport" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a form of displacement within a city" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#attractionCastellBarcelona
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#attractionCastellBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#attractionCastellBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#attractionCastellBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#attractionCastellBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier> "16"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#attractionCastellBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName> "Castell Barcelona" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#attractionCastellBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating> "4.5"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#pointBarcelona> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName> "Barcelona" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#eventFiraBarcelona
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#eventFiraBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#eventFiraBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#eventFiraBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#eventFiraBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate> "2024-09-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#eventFiraBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier> "12"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#eventFiraBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName> "Fira Barcelona" .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelHotelRoyalBarcelona
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelHotelRoyalBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelHotelRoyalBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelHotelRoyalBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelHotelRoyalBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelHotelRoyalBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName> "Hotel Royal Barcelona" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelHotelRoyalBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice> "252.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelHotelRoyalBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating> "4.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelHotelRoyalBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelTest
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelTest> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating> "4.6"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelTest> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#pointBarcelona
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#pointBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#pointBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#pointBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude> "41.3874"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#pointBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude> "2.1686"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#restaurantRestaurantFusioBarcelona
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#restaurantRestaurantFusioBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#restaurantRestaurantFusioBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#restaurantRestaurantFusioBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#restaurantRestaurantFusioBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice> "43.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#restaurantRestaurantFusioBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier> "43"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#restaurantRestaurantFusioBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName> "Restaurant Fusió Barcelona" .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#restaurantRestaurantFusioBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating> "3.8"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#transportBusBarcelona
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#transportBusBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#transportBusBarcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#transportBusBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#transportBusBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice> "8.72"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#transportBusBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#transportBusBarcelona> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider> "Metro Barcelona" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid38 <http://www.w3.org/2002/07/owl#members> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid44 <http://www.w3.org/2002/07/owl#members> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid50 <http://www.w3.org/2002/07/owl#members> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid56 <http://www.w3.org/2002/07/owl#members> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid62 <http://www.w3.org/2002/07/owl#members> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid66 <http://www.w3.org/2002/07/owl#members> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid72 <http://www.w3.org/2002/07/owl#members> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/h> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/s> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid102 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid102 <http://www.w3.org/2000/01/rdf-schema#comment> "Defines if a TourismResource isn't highly rated by users" .
+_:genid102 <http://www.w3.org/2000/01/rdf-schema#label> "isntHighlyRatedRule" .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid102 <http://www.w3.org/2003/11/swrl#body> _:genid109 .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid107 .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid103 .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid104 .
+_:genid104 <http://www.w3.org/2003/11/swrl#arguments> _:genid106 .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid105 .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/r> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid104 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> .
+<http://www.w3.org/2003/11/swrlb#lessThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid108 .
+_:genid108 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/r> .
+_:genid108 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t> .
+_:genid108 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating> .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid110 .
+_:genid110 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t> .
+_:genid110 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid102 <http://www.w3.org/2003/11/swrl#head> _:genid111 .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid112 .
+_:genid112 <http://www.w3.org/2003/11/swrl#argument2> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid112 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t> .
+_:genid112 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers> .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid78 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid78 <http://www.w3.org/2000/01/rdf-schema#comment> "Defines if a hotel is a Top Hotel" .
+_:genid78 <http://www.w3.org/2000/01/rdf-schema#label> "isTopHotelRule" .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid78 <http://www.w3.org/2003/11/swrl#body> _:genid87 .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid85 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid81 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid80 .
+_:genid80 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/s> .
+_:genid80 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/h> .
+_:genid80 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid82 .
+_:genid82 <http://www.w3.org/2003/11/swrl#arguments> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid83 .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/s> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid82 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> .
+<http://www.w3.org/2003/11/swrlb#equal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid86 .
+_:genid86 <http://www.w3.org/2003/11/swrl#argument2> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid86 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/h> .
+_:genid86 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid88 .
+_:genid88 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/h> .
+_:genid88 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid78 <http://www.w3.org/2003/11/swrl#head> _:genid89 .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid90 .
+_:genid90 <http://www.w3.org/2003/11/swrl#argument2> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid90 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/h> .
+_:genid90 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isTopHotel> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid91 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid91 <http://www.w3.org/2000/01/rdf-schema#comment> "Defines if a TourismResource is highly rated by users" .
+_:genid91 <http://www.w3.org/2000/01/rdf-schema#label> "isHighlyRatedRule" .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid91 <http://www.w3.org/2003/11/swrl#body> _:genid98 .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid96 .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid92 .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid93 .
+_:genid93 <http://www.w3.org/2003/11/swrl#arguments> _:genid95 .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid94 .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/r> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid93 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> .
+<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid97 .
+_:genid97 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/r> .
+_:genid97 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t> .
+_:genid97 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid99 .
+_:genid99 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t> .
+_:genid99 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid91 <http://www.w3.org/2003/11/swrl#head> _:genid100 .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid101 .
+_:genid101 <http://www.w3.org/2003/11/swrl#argument2> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid101 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t> .
+_:genid101 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers> .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

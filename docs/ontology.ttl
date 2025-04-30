@@ -1,0 +1,788 @@
+@prefix : <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#> .
+
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology> rdf:type owl:Ontology ;
+                                                                                 rdfs:comment "Ontology for Intelligent Tourism (ITO)" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity
+:availableAtCity rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :hasTourismResource ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain :TourismResource ;
+                 rdfs:range :City ;
+                 rdfs:comment "Relates a tourism resource to the city where it is located" ;
+                 rdfs:label "availableAtCity" ;
+                 rdfs:seeAlso """schema:availableAtOrFrom
+https://schema.org/availableAtOrFrom""" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation
+:cityLocation rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isLocationOf ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain :City ;
+              rdfs:range :Point ;
+              rdfs:comment "The relation between a City and the Point that has the coordinates" ;
+              rdfs:label "cityLocation" ;
+              rdfs:sameAs """geo:location
+<http://www.w3.org/2003/01/geo/wgs84_pos#location>""" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasTourismResource
+:hasTourismResource rdf:type owl:ObjectProperty ;
+                    rdfs:domain :City ;
+                    rdfs:range :TourismResource ;
+                    rdfs:comment "Relates a city with a tourist resource available in it." ;
+                    rdfs:label "hasTourismResource" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf
+:isLocationOf rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Point ;
+              rdfs:range :City ;
+              rdfs:comment "The relation between the Point and the City that is located at the point coordinates" ;
+              rdfs:label "isLocationOf" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice
+:hasAveragePrice rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasPrice ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Restaurant
+                                             :Transport
+                                           )
+                             ] ;
+                 rdfs:range xsd:float ;
+                 owl:propertyDisjointWith :hasNightPrice ;
+                 rdfs:comment "The average price of a specific Tourism Resource" ;
+                 rdfs:label "hasAveragePrice" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate
+:hasDate rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Event ;
+         rdfs:range xsd:date ;
+         rdfs:comment "Date may be used to express temporal information according to ISO 8601-1" ;
+         rdfs:label "hasDate" ;
+         rdfs:seeAlso """dcterms:date
+<http://purl.org/dc/terms/date>""" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier
+:hasIdentifier rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :City
+                                           :TourismResource
+                                         )
+                           ] ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "An unambiguous reference to the resource within a given context." ;
+               rdfs:label "hasIdentifier" ;
+               rdfs:seeAlso """dcterms:identifier
+<http://purl.org/dc/terms/identifier>""" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude
+:hasLatitude rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Point ;
+             rdfs:range [ rdf:type rdfs:Datatype ;
+                          owl:onDatatype xsd:float ;
+                          owl:withRestrictions ( [ xsd:minInclusive "-90.0"^^xsd:float
+                                                 ]
+                                                 [ xsd:maxInclusive "90.0"^^xsd:float
+                                                 ]
+                                               )
+                        ] ;
+             rdfs:comment "Latitude coordinate of a point" ;
+             rdfs:label "hasLatitude" ;
+             rdfs:sameAs """geo:lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat>""" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude
+:hasLongitude rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Point ;
+              rdfs:range [ rdf:type rdfs:Datatype ;
+                           owl:onDatatype xsd:float ;
+                           owl:withRestrictions ( [ xsd:minInclusive "-180.0"^^xsd:float
+                                                  ]
+                                                  [ xsd:maxInclusive "180.0"^^xsd:float
+                                                  ]
+                                                )
+                         ] ;
+              rdfs:comment "Longitude coordinate of a point" ;
+              rdfs:label "hasLongitude" ;
+              rdfs:sameAs """geo:long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long>""" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName
+:hasName rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :City
+                                     :TourismResource
+                                   )
+                     ] ;
+         rdfs:range xsd:string ;
+         rdfs:comment "A name for some thing" ;
+         rdfs:label "hasName" ;
+         rdfs:seeAlso """foaf:name
+<http://xmlns.com/foaf/0.1/name>""" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice
+:hasNightPrice rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasPrice ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :Hotel ;
+               rdfs:range xsd:float ;
+               rdfs:comment "The night price of a hotel" ;
+               rdfs:label "hasNightPrice" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice
+:hasPrice rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Hotel
+                                      :Restaurant
+                                      :Transport
+                                    )
+                      ] ;
+          rdfs:range xsd:float ;
+          rdfs:comment "The offer price of a product, in this case of a specific Tourism Resource" ;
+          rdfs:label "hasPrice" ;
+          rdfs:seeAlso """schema:price
+https://schema.org/price""" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider
+:hasProvider rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Transport ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The name of the service provider, service operator, or service performer" ;
+             rdfs:label "hasProvider" ;
+             rdfs:seeAlso """schema:provider
+<https://schema.org/provider>""" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating
+:hasRating rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Hotel
+                                       :Restaurant
+                                       :TouristAttraction
+                                     )
+                       ] ;
+           rdfs:range [ rdf:type rdfs:Datatype ;
+                        owl:onDatatype xsd:float ;
+                        owl:withRestrictions ( [ xsd:minInclusive "0.0"^^xsd:float
+                                               ]
+                                               [ xsd:maxInclusive "5.0"^^xsd:float
+                                               ]
+                                             )
+                      ] ;
+           rdfs:comment "The average rating given by users" ;
+           rdfs:label "hasRating" ;
+           rdfs:seeAlso """dbpedia-owl:rating
+<http://dbpedia.org/ontology/rating>""" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating
+:hasStarRating rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :Hotel ;
+               rdfs:range [ rdf:type rdfs:Datatype ;
+                            owl:onDatatype xsd:integer ;
+                            owl:withRestrictions ( [ xsd:minInclusive 1
+                                                   ]
+                                                   [ xsd:maxInclusive 5
+                                                   ]
+                                                 )
+                          ] ;
+               rdfs:comment "The star rating of the Hotel" ;
+               rdfs:label "hasStarRating" ;
+               rdfs:seeAlso """dbpedia-owl:starRating
+<http://dbpedia.org/ontology/starRating>""" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers
+:isHighlyRatedByUsers rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain :TourismResource ;
+                      rdfs:range xsd:boolean ;
+                      rdfs:comment "Indicates whether a Tourist Resource has been rated above a certain value by users." ;
+                      rdfs:label "isHighlyRatedByUsers" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isTopHotel
+:isTopHotel rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Hotel ;
+            rdfs:range xsd:boolean ;
+            rdfs:comment "Indicates whether a Hotel has been rated above a certain value by users and has more than a certain number of stars" ;
+            rdfs:label "isTopHotel" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant
+:AndalusianRestaurant rdf:type owl:Class ;
+                      rdfs:subClassOf :Restaurant ;
+                      rdfs:comment "It is a type of restaurant serving Andalusian dishes" ;
+                      rdfs:label "AndalusianRestaurant" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction
+:BeachAttraction rdf:type owl:Class ;
+                 rdfs:subClassOf :TouristAttraction ;
+                 rdfs:comment "It is a type of natural attraction, usually related to coastal areas" ;
+                 rdfs:label "BeachAttraction" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel
+:BeachHotel rdf:type owl:Class ;
+            rdfs:subClassOf :Hotel ;
+            rdfs:comment "It is a type of hotel that is located near the beach" ;
+            rdfs:label "BeachHotel" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport
+:BusTransport rdf:type owl:Class ;
+              rdfs:subClassOf :Transport ;
+              rdfs:comment "It is a means of public transport that operates on established routes" ;
+              rdfs:label "BusTransport" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel
+:BusinessHotel rdf:type owl:Class ;
+               rdfs:subClassOf :Hotel ;
+               rdfs:comment "It is a type of hotel designed for business professionals" ;
+               rdfs:label "BusinessHotel" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City
+:City rdf:type owl:Class ;
+      rdfs:comment "A city is a geographical location that has associated geographical coordinates" ;
+      rdfs:label "City" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction
+:CulturalAttraction rdf:type owl:Class ;
+                    rdfs:subClassOf :TouristAttraction ;
+                    rdfs:comment "It is a type of attraction related to activities or spaces that promote education and the conservation of culture" ;
+                    rdfs:label "CulturalAttraction" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent
+:CulturalEvent rdf:type owl:Class ;
+               rdfs:subClassOf :Event ;
+               rdfs:comment "It is a type of event dedicated to culture" ;
+               rdfs:label "CulturalEvent" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf :TourismResource ;
+       rdfs:comment "It is a programmed activity that takes place in a city" ;
+       rdfs:label "Event" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent
+:GastronomicEvent rdf:type owl:Class ;
+                  rdfs:subClassOf :Event ;
+                  rdfs:comment "It is a type of event dedicated to gastronomy" ;
+                  rdfs:label "GastronomicEvent" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel
+:Hotel rdf:type owl:Class ;
+       rdfs:subClassOf :TourismResource ;
+       rdfs:comment "It is a tourist accommodation establishment" ;
+       rdfs:label "Hotel" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant
+:ItalianRestaurant rdf:type owl:Class ;
+                   rdfs:subClassOf :Restaurant ;
+                   rdfs:comment "It is a type of restaurant serving Italian dishes" ;
+                   rdfs:label "ItalianRestaurant" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant
+:JapaneseRestaurant rdf:type owl:Class ;
+                    rdfs:subClassOf :Restaurant ;
+                    rdfs:comment "It is a type of restaurant serving Japanese dishes" ;
+                    rdfs:label "JapaneseRestaurant" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel
+:LuxuryHotel rdf:type owl:Class ;
+             rdfs:subClassOf :Hotel ;
+             rdfs:comment "It is a type of high-end hotel" ;
+             rdfs:label "LuxuryHotel" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant
+:MediterraneanRestaurant rdf:type owl:Class ;
+                         rdfs:subClassOf :Restaurant ;
+                         rdfs:comment "It is a type of restaurant serving Mediterranean dishes" ;
+                         rdfs:label "MediterraneanRestaurant" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport
+:MetroTransport rdf:type owl:Class ;
+                rdfs:subClassOf :Transport ;
+                rdfs:comment "It is an underground public transport system that allows you to move quickly around the city" ;
+                rdfs:label "MetroTransport" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant
+:MexicanRestaurant rdf:type owl:Class ;
+                   rdfs:subClassOf :Restaurant ;
+                   rdfs:comment "It is a type of restaurant serving Mexican dishes" ;
+                   rdfs:label "MexicanRestaurant" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction
+:MonumentAttraction rdf:type owl:Class ;
+                    rdfs:subClassOf :TouristAttraction ;
+                    rdfs:comment "It is a type of attraction that represents a structure of great historical, cultural or architectural importance" ;
+                    rdfs:label "MonumentAttraction" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction
+:MuseumAttraction rdf:type owl:Class ;
+                  rdfs:subClassOf :TouristAttraction ;
+                  rdfs:comment "It is a type of attraction that represents a space dedicated to the exhibition and conservation of objects of historical, artistic or scientific value" ;
+                  rdfs:label "MuseumAttraction" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent
+:MusicEvent rdf:type owl:Class ;
+            rdfs:subClassOf :Event ;
+            rdfs:comment "It is a type of event dedicated to music" ;
+            rdfs:label "MusicEvent" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction
+:ParkAttraction rdf:type owl:Class ;
+                rdfs:subClassOf :TouristAttraction ;
+                rdfs:comment "It is a type of attraction that represents a green area with spaces for outdoor activities" ;
+                rdfs:label "ParkAttraction" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point
+:Point rdf:type owl:Class ;
+       rdfs:comment "A point, typically described using a coordinate system relative to Earth, such as WGS84." ;
+       rdfs:label "Point" ;
+       rdfs:seeAlso """geo:Point
+http://www.w3.org/2003/01/geo/wgs84_pos#Point""" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport
+:PublicBicycleTransport rdf:type owl:Class ;
+                        rdfs:subClassOf :Transport ;
+                        rdfs:comment "It is a bicycle rental service for public use" ;
+                        rdfs:label "PublicBicycleTransport" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant
+:Restaurant rdf:type owl:Class ;
+            rdfs:subClassOf :TourismResource ;
+            rdfs:comment "It is an establishment dedicated to the preparation and service of meals and drinks" ;
+            rdfs:label "Restaurant" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel
+:RuralHotel rdf:type owl:Class ;
+            rdfs:subClassOf :Hotel ;
+            rdfs:comment "It is a type of hotel located in rural areas" ;
+            rdfs:label "RuralHotel" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent
+:SportEvent rdf:type owl:Class ;
+            rdfs:subClassOf :Event ;
+            rdfs:comment "It is a type of event dedicated to sports" ;
+            rdfs:label "SportEvent" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport
+:TaxiTransport rdf:type owl:Class ;
+               rdfs:subClassOf :Transport ;
+               rdfs:comment "It is a private transport that is contracted for a specific trip" ;
+               rdfs:label "TaxiTransport" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent
+:TechnologicalEvent rdf:type owl:Class ;
+                    rdfs:subClassOf :Event ;
+                    rdfs:comment "It is a type of event dedicated to technology" ;
+                    rdfs:label "TechnologicalEvent" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource
+:TourismResource rdf:type owl:Class ;
+                 rdfs:comment "A general class representing any type of resource or service related to tourism" ;
+                 rdfs:label "TourismResource" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction
+:TouristAttraction rdf:type owl:Class ;
+                   rdfs:subClassOf :TourismResource ;
+                   rdfs:comment "It is a place of tourist interest" ;
+                   rdfs:label "TourismAttraction" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel
+:TouristHotel rdf:type owl:Class ;
+              rdfs:subClassOf :Hotel ;
+              rdfs:comment "It is a type of hotel oriented to tourists" ;
+              rdfs:label "TouristHotel" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport
+:TramTransport rdf:type owl:Class ;
+               rdfs:subClassOf :Transport ;
+               rdfs:comment "It is a public transport on the surface that runs through dedicated lanes" ;
+               rdfs:label "TramTransport" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport
+:Transport rdf:type owl:Class ;
+           rdfs:subClassOf :TourismResource ;
+           rdfs:comment "It is a form of displacement within a city" ;
+           rdfs:label "Transport" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#attractionCastellBarcelona
+:attractionCastellBarcelona rdf:type owl:NamedIndividual ,
+                                     :CulturalAttraction ;
+                            :availableAtCity :cityBarcelona ;
+                            :hasIdentifier 16 ;
+                            :hasName "Castell Barcelona" ;
+                            :hasRating "4.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona
+:cityBarcelona rdf:type owl:NamedIndividual ,
+                        :City ;
+               :cityLocation :pointBarcelona ;
+               :hasIdentifier 4 ;
+               :hasName "Barcelona" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#eventFiraBarcelona
+:eventFiraBarcelona rdf:type owl:NamedIndividual ,
+                             :CulturalEvent ;
+                    :availableAtCity :cityBarcelona ;
+                    :hasDate "2024-09-21"^^xsd:date ;
+                    :hasIdentifier 12 ;
+                    :hasName "Fira Barcelona" .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelHotelRoyalBarcelona
+:hotelHotelRoyalBarcelona rdf:type owl:NamedIndividual ,
+                                   :BeachHotel ;
+                          :availableAtCity :cityBarcelona ;
+                          :hasIdentifier 9 ;
+                          :hasName "Hotel Royal Barcelona" ;
+                          :hasNightPrice "252.0"^^xsd:float ;
+                          :hasRating "4.0"^^xsd:float ;
+                          :hasStarRating 4 .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelTest
+:hotelTest rdf:type owl:NamedIndividual ,
+                    :LuxuryHotel ;
+           :hasRating "4.6"^^xsd:float ;
+           :hasStarRating 5 .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#pointBarcelona
+:pointBarcelona rdf:type owl:NamedIndividual ,
+                         :Point ;
+                :hasLatitude "41.3874"^^xsd:float ;
+                :hasLongitude "2.1686"^^xsd:float .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#restaurantRestaurantFusioBarcelona
+:restaurantRestaurantFusioBarcelona rdf:type owl:NamedIndividual ,
+                                             :MexicanRestaurant ;
+                                    :availableAtCity :cityBarcelona ;
+                                    :hasAveragePrice "43.0"^^xsd:float ;
+                                    :hasIdentifier 43 ;
+                                    :hasName "Restaurant Fusió Barcelona" ;
+                                    :hasRating "3.8"^^xsd:float .
+
+
+###  http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#transportBusBarcelona
+:transportBusBarcelona rdf:type owl:NamedIndividual ,
+                                :BusTransport ;
+                       :availableAtCity :cityBarcelona ;
+                       :hasAveragePrice "8.72"^^xsd:float ;
+                       :hasIdentifier 9 ;
+                       :hasProvider "Metro Barcelona" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AndalusianRestaurant
+                :ItalianRestaurant
+                :JapaneseRestaurant
+                :MediterraneanRestaurant
+                :MexicanRestaurant
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BeachAttraction
+                :CulturalAttraction
+                :MonumentAttraction
+                :MuseumAttraction
+                :ParkAttraction
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BeachHotel
+                :BusinessHotel
+                :LuxuryHotel
+                :RuralHotel
+                :TouristHotel
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BusTransport
+                :MetroTransport
+                :PublicBicycleTransport
+                :TaxiTransport
+                :TramTransport
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :City
+                :Point
+                :TourismResource
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CulturalEvent
+                :GastronomicEvent
+                :MusicEvent
+                :SportEvent
+                :TechnologicalEvent
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Event
+                :Hotel
+                :Restaurant
+                :TouristAttraction
+                :Transport
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/h> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/s> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Defines if a TourismResource isn't highly rated by users" ;
+   rdfs:label "isntHighlyRatedRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :TourismResource ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRating ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/r> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 4.5 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isHighlyRatedByUsers ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "false"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Defines if a hotel is a Top Hotel" ;
+   rdfs:label "isTopHotelRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Hotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/h>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :isHighlyRatedByUsers ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/h> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/s> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 5 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasStarRating ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/h> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/s>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isTopHotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/h> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Defines if a TourismResource is highly rated by users" ;
+   rdfs:label "isHighlyRatedRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :TourismResource ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRating ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/r> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 4.5 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isHighlyRatedByUsers ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology/t> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

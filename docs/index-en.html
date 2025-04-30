@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Intelligent Tourism Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology","name":"Intelligent Tourism Ontology", "headline":"Document describing the ontology http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology", "dateReleased":"2025/04/29", "author":[{"@type":"Person","name":"Hector Vicente"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Intelligent Tourism Ontology</h1>
+<h2>Release: 2025/04/29</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology">http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology</a></dd>
+<dt>Authors:</dt>
+<dd>Hector Vicente, UOC<a href="mailto:hvicenteb@uoc.edu">&#9993;</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.example.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.example.org" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Intelligent Tourism Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Intelligent Tourism Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AndalusianRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant">AndalusianRestaurant</a></li>
+  <li><a href="#BeachAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction">BeachAttraction</a></li>
+  <li><a href="#BeachHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel">BeachHotel</a></li>
+  <li><a href="#BusinessHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel">BusinessHotel</a></li>
+  <li><a href="#BusTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport">BusTransport</a></li>
+  <li><a href="#City" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City">City</a></li>
+  <li><a href="#CulturalAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction">CulturalAttraction</a></li>
+  <li><a href="#CulturalEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent">CulturalEvent</a></li>
+  <li><a href="#Event" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event">Event</a></li>
+  <li><a href="#GastronomicEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent">GastronomicEvent</a></li>
+  <li><a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a></li>
+  <li><a href="#ItalianRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant">ItalianRestaurant</a></li>
+  <li><a href="#JapaneseRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant">JapaneseRestaurant</a></li>
+  <li><a href="#LuxuryHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel">LuxuryHotel</a></li>
+  <li><a href="#MediterraneanRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant">MediterraneanRestaurant</a></li>
+  <li><a href="#MetroTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport">MetroTransport</a></li>
+  <li><a href="#MexicanRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant">MexicanRestaurant</a></li>
+  <li><a href="#MonumentAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction">MonumentAttraction</a></li>
+  <li><a href="#MuseumAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction">MuseumAttraction</a></li>
+  <li><a href="#MusicEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent">MusicEvent</a></li>
+  <li><a href="#ParkAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction">ParkAttraction</a></li>
+  <li><a href="#Point" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point">Point</a></li>
+  <li><a href="#PublicBicycleTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport">PublicBicycleTransport</a></li>
+  <li><a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a></li>
+  <li><a href="#RuralHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel">RuralHotel</a></li>
+  <li><a href="#SportEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent">SportEvent</a></li>
+  <li><a href="#TaxiTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport">TaxiTransport</a></li>
+  <li><a href="#TechnologicalEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent">TechnologicalEvent</a></li>
+  <li><a href="#TouristAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction">TourismAttraction</a></li>
+  <li><a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a></li>
+  <li><a href="#TouristHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel">TouristHotel</a></li>
+  <li><a href="#TramTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport">TramTransport</a></li>
+  <li><a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a></li>
+ </ul>
+ <div class="entity" id="AndalusianRestaurant">
+  <h3>AndalusianRestaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant</p>
+  <div class="comment">
+   <span class="markdown">It is a type of restaurant serving Andalusian dishes</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#ItalianRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant">ItalianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#JapaneseRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant">JapaneseRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#MediterraneanRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant">MediterraneanRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#MexicanRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant">MexicanRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BeachAttraction">
+  <h3>BeachAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction</p>
+  <div class="comment">
+   <span class="markdown">It is a type of natural attraction, usually related to coastal areas</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TouristAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction">TourismAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CulturalAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#MonumentAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction">MonumentAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#MuseumAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction">MuseumAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#ParkAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction">ParkAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BeachHotel">
+  <h3>BeachHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel</p>
+  <div class="comment">
+   <span class="markdown">It is a type of hotel that is located near the beach</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#hotelHotelRoyalBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelHotelRoyalBarcelona">hotel Hotel Royal Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BusinessHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel">BusinessHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#LuxuryHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel">LuxuryHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#RuralHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel">RuralHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel">TouristHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BusinessHotel">
+  <h3>BusinessHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel</p>
+  <div class="comment">
+   <span class="markdown">It is a type of hotel designed for business professionals</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BeachHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#LuxuryHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel">LuxuryHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#RuralHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel">RuralHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel">TouristHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BusTransport">
+  <h3>BusTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport</p>
+  <div class="comment">
+   <span class="markdown">It is a means of public transport that operates on established routes</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#transportBusBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#transportBusBarcelona">transport Bus Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#MetroTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#PublicBicycleTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport">PublicBicycleTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TaxiTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TramTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="City">
+  <h3>City<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City</p>
+  <div class="comment">
+   <span class="markdown">A city is a geographical location that has associated geographical coordinates</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#cityLocation" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation">cityLocation</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIdentifier" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier">hasIdentifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasName" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName">hasName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasTourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasTourismResource">hasTourismResource</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#availableAtCity" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity">availableAtCity</a> <sup class="type-op" title="object property">op</sup>, <a href="#isLocationOf" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf">isLocationOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#cityBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona">city Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Point" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point">Point</a> <sup class="type-c" title="class">c</sup>, <a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalAttraction">
+  <h3>CulturalAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction</p>
+  <div class="comment">
+   <span class="markdown">It is a type of attraction related to activities or spaces that promote education and the conservation of culture</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TouristAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction">TourismAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#attractionCastellBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#attractionCastellBarcelona">attraction Castell Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BeachAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction">BeachAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#MonumentAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction">MonumentAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#MuseumAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction">MuseumAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#ParkAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction">ParkAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalEvent">
+  <h3>CulturalEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent</p>
+  <div class="comment">
+   <span class="markdown">It is a type of event dedicated to culture</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#eventFiraBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#eventFiraBarcelona">event Fira Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#GastronomicEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#MusicEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent">MusicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#SportEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent">SportEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#TechnologicalEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent">TechnologicalEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Event">
+  <h3>Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event</p>
+  <div class="comment">
+   <span class="markdown">It is a programmed activity that takes place in a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CulturalEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#GastronomicEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#MusicEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent">MusicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#SportEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent">SportEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#TechnologicalEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent">TechnologicalEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasDate" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate">hasDate</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction">TourismAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GastronomicEvent">
+  <h3>GastronomicEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent</p>
+  <div class="comment">
+   <span class="markdown">It is a type of event dedicated to gastronomy</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CulturalEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#MusicEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent">MusicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#SportEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent">SportEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#TechnologicalEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent">TechnologicalEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Hotel">
+  <h3>Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel</p>
+  <div class="comment">
+   <span class="markdown">It is a tourist accommodation establishment</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BeachHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#BusinessHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel">BusinessHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#LuxuryHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel">LuxuryHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#RuralHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel">RuralHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel">TouristHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasNightPrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice">hasNightPrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice">hasPrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating">hasRating</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasStarRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating">hasStarRating</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isTopHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isTopHotel">isTopHotel</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction">TourismAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ItalianRestaurant">
+  <h3>ItalianRestaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant</p>
+  <div class="comment">
+   <span class="markdown">It is a type of restaurant serving Italian dishes</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AndalusianRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant">AndalusianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#JapaneseRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant">JapaneseRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#MediterraneanRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant">MediterraneanRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#MexicanRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant">MexicanRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="JapaneseRestaurant">
+  <h3>JapaneseRestaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant</p>
+  <div class="comment">
+   <span class="markdown">It is a type of restaurant serving Japanese dishes</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AndalusianRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant">AndalusianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#ItalianRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant">ItalianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#MediterraneanRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant">MediterraneanRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#MexicanRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant">MexicanRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LuxuryHotel">
+  <h3>LuxuryHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel</p>
+  <div class="comment">
+   <span class="markdown">It is a type of high-end hotel</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#hotelTest" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelTest">hotel Test</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BeachHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#BusinessHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel">BusinessHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#RuralHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel">RuralHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel">TouristHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MediterraneanRestaurant">
+  <h3>MediterraneanRestaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant</p>
+  <div class="comment">
+   <span class="markdown">It is a type of restaurant serving Mediterranean dishes</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AndalusianRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant">AndalusianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#ItalianRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant">ItalianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#JapaneseRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant">JapaneseRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#MexicanRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant">MexicanRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MetroTransport">
+  <h3>MetroTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport</p>
+  <div class="comment">
+   <span class="markdown">It is an underground public transport system that allows you to move quickly around the city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BusTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#PublicBicycleTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport">PublicBicycleTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TaxiTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TramTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MexicanRestaurant">
+  <h3>MexicanRestaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant</p>
+  <div class="comment">
+   <span class="markdown">It is a type of restaurant serving Mexican dishes</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#restaurantRestaurantFusioBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#restaurantRestaurantFusioBarcelona">restaurant Restaurant Fusio Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AndalusianRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant">AndalusianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#ItalianRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant">ItalianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#JapaneseRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant">JapaneseRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#MediterraneanRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant">MediterraneanRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MonumentAttraction">
+  <h3>MonumentAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction</p>
+  <div class="comment">
+   <span class="markdown">It is a type of attraction that represents a structure of great historical, cultural or architectural importance</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TouristAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction">TourismAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BeachAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction">BeachAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#CulturalAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#MuseumAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction">MuseumAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#ParkAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction">ParkAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MuseumAttraction">
+  <h3>MuseumAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction</p>
+  <div class="comment">
+   <span class="markdown">It is a type of attraction that represents a space dedicated to the exhibition and conservation of objects of historical, artistic or scientific value</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TouristAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction">TourismAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BeachAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction">BeachAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#CulturalAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#MonumentAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction">MonumentAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#ParkAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction">ParkAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MusicEvent">
+  <h3>MusicEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent</p>
+  <div class="comment">
+   <span class="markdown">It is a type of event dedicated to music</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CulturalEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#GastronomicEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#SportEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent">SportEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#TechnologicalEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent">TechnologicalEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ParkAttraction">
+  <h3>ParkAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction</p>
+  <div class="comment">
+   <span class="markdown">It is a type of attraction that represents a green area with spaces for outdoor activities</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TouristAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction">TourismAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BeachAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction">BeachAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#CulturalAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#MonumentAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction">MonumentAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#MuseumAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction">MuseumAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Point">
+  <h3>Point<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point</p>
+  <div class="comment">
+   <span class="markdown">A point, typically described using a coordinate system relative to Earth, such as WGS84.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasLatitude" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude">hasLatitude</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasLongitude" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude">hasLongitude</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isLocationOf" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf">isLocationOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#cityLocation" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation">cityLocation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#pointBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#pointBarcelona">point Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#City" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City">City</a> <sup class="type-c" title="class">c</sup>, <a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PublicBicycleTransport">
+  <h3>PublicBicycleTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport</p>
+  <div class="comment">
+   <span class="markdown">It is a bicycle rental service for public use</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BusTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#MetroTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TaxiTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TramTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Restaurant">
+  <h3>Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant</p>
+  <div class="comment">
+   <span class="markdown">It is an establishment dedicated to the preparation and service of meals and drinks</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AndalusianRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#AndalusianRestaurant">AndalusianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#ItalianRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ItalianRestaurant">ItalianRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#JapaneseRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#JapaneseRestaurant">JapaneseRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#MediterraneanRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MediterraneanRestaurant">MediterraneanRestaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#MexicanRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant">MexicanRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasAveragePrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice">hasAveragePrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice">hasPrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating">hasRating</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>, <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction">TourismAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RuralHotel">
+  <h3>RuralHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel</p>
+  <div class="comment">
+   <span class="markdown">It is a type of hotel located in rural areas</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BeachHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#BusinessHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel">BusinessHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#LuxuryHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel">LuxuryHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel">TouristHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SportEvent">
+  <h3>SportEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent</p>
+  <div class="comment">
+   <span class="markdown">It is a type of event dedicated to sports</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CulturalEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#GastronomicEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#MusicEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent">MusicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#TechnologicalEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent">TechnologicalEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TaxiTransport">
+  <h3>TaxiTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport</p>
+  <div class="comment">
+   <span class="markdown">It is a private transport that is contracted for a specific trip</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BusTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#MetroTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#PublicBicycleTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport">PublicBicycleTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TramTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TechnologicalEvent">
+  <h3>TechnologicalEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TechnologicalEvent</p>
+  <div class="comment">
+   <span class="markdown">It is a type of event dedicated to technology</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CulturalEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#GastronomicEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#GastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#MusicEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MusicEvent">MusicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#SportEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#SportEvent">SportEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TouristAttraction">
+  <h3>TourismAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction</p>
+  <div class="comment">
+   <span class="markdown">It is a place of tourist interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BeachAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachAttraction">BeachAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#CulturalAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#MonumentAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MonumentAttraction">MonumentAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#MuseumAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MuseumAttraction">MuseumAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#ParkAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#ParkAttraction">ParkAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating">hasRating</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>, <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TourismResource">
+  <h3>TourismResource<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource</p>
+  <div class="comment">
+   <span class="markdown">A general class representing any type of resource or service related to tourism</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>, <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction">TourismAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#availableAtCity" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity">availableAtCity</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIdentifier" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier">hasIdentifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasName" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName">hasName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isHighlyRatedByUsers" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers">isHighlyRatedByUsers</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasTourismResource">hasTourismResource</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#City" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City">City</a> <sup class="type-c" title="class">c</sup>, <a href="#Point" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point">Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TouristHotel">
+  <h3>TouristHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristHotel</p>
+  <div class="comment">
+   <span class="markdown">It is a type of hotel oriented to tourists</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BeachHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#BusinessHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusinessHotel">BusinessHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#LuxuryHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel">LuxuryHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#RuralHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#RuralHotel">RuralHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TramTransport">
+  <h3>TramTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport</p>
+  <div class="comment">
+   <span class="markdown">It is a public transport on the surface that runs through dedicated lanes</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BusTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#MetroTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#PublicBicycleTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport">PublicBicycleTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TaxiTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Transport">
+  <h3>Transport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport</p>
+  <div class="comment">
+   <span class="markdown">It is a form of displacement within a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BusTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#MetroTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#PublicBicycleTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#PublicBicycleTransport">PublicBicycleTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TaxiTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TramTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasAveragePrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice">hasAveragePrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice">hasPrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasProvider" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider">hasProvider</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>, <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction">TourismAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#availableAtCity" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity">availableAtCity</a></li>
+  <li><a href="#cityLocation" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation">cityLocation</a></li>
+  <li><a href="#hasTourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasTourismResource">hasTourismResource</a></li>
+  <li><a href="#isLocationOf" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf">isLocationOf</a></li>
+ </ul>
+ <div class="entity" id="availableAtCity">
+  <h3>availableAtCity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity</p>
+  <div class="comment">
+   <span class="markdown">Relates a tourism resource to the city where it is located</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#City" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasTourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasTourismResource">hasTourismResource</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="cityLocation">
+  <h3>cityLocation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation</p>
+  <div class="comment">
+   <span class="markdown">The relation between a City and the Point that has the coordinates</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#City" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Point" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point">Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isLocationOf" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf">isLocationOf</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTourismResource">
+  <h3>hasTourismResource<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasTourismResource</p>
+  <div class="comment">
+   <span class="markdown">Relates a city with a tourist resource available in it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#City" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#availableAtCity" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity">availableAtCity</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isLocationOf">
+  <h3>isLocationOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isLocationOf</p>
+  <div class="comment">
+   <span class="markdown">The relation between the Point and the City that is located at the point coordinates</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Point" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point">Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#City" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#cityLocation" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation">cityLocation</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasAveragePrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice">hasAveragePrice</a></li>
+  <li><a href="#hasDate" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate">hasDate</a></li>
+  <li><a href="#hasIdentifier" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier">hasIdentifier</a></li>
+  <li><a href="#hasLatitude" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude">hasLatitude</a></li>
+  <li><a href="#hasLongitude" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude">hasLongitude</a></li>
+  <li><a href="#hasName" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName">hasName</a></li>
+  <li><a href="#hasNightPrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice">hasNightPrice</a></li>
+  <li><a href="#hasPrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice">hasPrice</a></li>
+  <li><a href="#hasProvider" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider">hasProvider</a></li>
+  <li><a href="#hasRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating">hasRating</a></li>
+  <li><a href="#hasStarRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating">hasStarRating</a></li>
+  <li><a href="#isHighlyRatedByUsers" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers">isHighlyRatedByUsers</a></li>
+  <li><a href="#isTopHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isTopHotel">isTopHotel</a></li>
+ </ul>
+ <div class="entity" id="hasAveragePrice">
+  <h3>hasAveragePrice<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice</p>
+  <div class="comment">
+   <span class="markdown">The average price of a specific Tourism Resource</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasPrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice">hasPrice</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDate">
+  <h3>hasDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate</p>
+  <div class="comment">
+   <span class="markdown">Date may be used to express temporal information according to ISO 8601-1</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasIdentifier">
+  <h3>hasIdentifier<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier</p>
+  <div class="comment">
+   <span class="markdown">An unambiguous reference to the resource within a given context.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#City" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City">City</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLatitude">
+  <h3>hasLatitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude</p>
+  <div class="comment">
+   <span class="markdown">Latitude coordinate of a point</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Point" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point">Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd></dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLongitude">
+  <h3>hasLongitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude</p>
+  <div class="comment">
+   <span class="markdown">Longitude coordinate of a point</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Point" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point">Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd></dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasName">
+  <h3>hasName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName</p>
+  <div class="comment">
+   <span class="markdown">A name for some thing</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#City" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City">City</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasNightPrice">
+  <h3>hasNightPrice<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice</p>
+  <div class="comment">
+   <span class="markdown">The night price of a hotel</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasPrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice">hasPrice</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPrice">
+  <h3>hasPrice<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasPrice</p>
+  <div class="comment">
+   <span class="markdown">The offer price of a product, in this case of a specific Tourism Resource</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#hasAveragePrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice">hasAveragePrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasNightPrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice">hasNightPrice</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasProvider">
+  <h3>hasProvider<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider</p>
+  <div class="comment">
+   <span class="markdown">The name of the service provider, service operator, or service performer</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Transport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasRating">
+  <h3>hasRating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating</p>
+  <div class="comment">
+   <span class="markdown">The average rating given by users</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Restaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TouristAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TouristAttraction">TourismAttraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd></dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasStarRating">
+  <h3>hasStarRating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating</p>
+  <div class="comment">
+   <span class="markdown">The star rating of the Hotel</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd></dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isHighlyRatedByUsers">
+  <h3>isHighlyRatedByUsers<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers</p>
+  <div class="comment">
+   <span class="markdown">Indicates whether a Tourist Resource has been rated above a certain value by users.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isTopHotel">
+  <h3>isTopHotel<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isTopHotel</p>
+  <div class="comment">
+   <span class="markdown">Indicates whether a Hotel has been rated above a certain value by users and has more than a certain number of stars</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"> <span>is Rule Enabled</span> </a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#sameAs" title="http://www.w3.org/2000/01/rdf-schema#sameAs"> <span>same As</span> </a></li>
+ </ul>
+ <div class="entity" id="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+  <h3>is Rule Enabled<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#sameAs">
+  <h3>same As<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#sameAs</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#attractionCastellBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#attractionCastellBarcelona"> <span>attraction Castell Barcelona</span> </a></li>
+  <li><a href="#cityBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona"> <span>city Barcelona</span> </a></li>
+  <li><a href="#eventFiraBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#eventFiraBarcelona"> <span>event Fira Barcelona</span> </a></li>
+  <li><a href="#hotelHotelRoyalBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelHotelRoyalBarcelona"> <span>hotel Hotel Royal Barcelona</span> </a></li>
+  <li><a href="#hotelTest" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelTest"> <span>hotel Test</span> </a></li>
+  <li><a href="#pointBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#pointBarcelona"> <span>point Barcelona</span> </a></li>
+  <li><a href="#restaurantRestaurantFusioBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#restaurantRestaurantFusioBarcelona"> <span>restaurant Restaurant Fusio Barcelona</span> </a></li>
+  <li><a href="#transportBusBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#transportBusBarcelona"> <span>transport Bus Barcelona</span> </a></li>
+ </ul>
+ <div class="entity" id="attractionCastellBarcelona">
+  <h3>attraction Castell Barcelona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#attractionCastellBarcelona</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CulturalAttraction" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#availableAtCity" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity">availableAtCity</a> <sup class="type-op" title="object property">op</sup> <a href="#cityBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona">city Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasIdentifier" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier">hasIdentifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"16"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#hasName" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName">hasName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Castell Barcelona"</span>
+   </dd>
+   <dd>
+    <a href="#hasRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating">hasRating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.5"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="cityBarcelona">
+  <h3>city Barcelona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#City" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#cityLocation" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityLocation">cityLocation</a> <sup class="type-op" title="object property">op</sup> <a href="#pointBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#pointBarcelona">point Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasIdentifier" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier">hasIdentifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#hasName" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName">hasName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Barcelona"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="eventFiraBarcelona">
+  <h3>event Fira Barcelona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#eventFiraBarcelona</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CulturalEvent" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#availableAtCity" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity">availableAtCity</a> <sup class="type-op" title="object property">op</sup> <a href="#cityBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona">city Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasDate" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasDate">hasDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-09-21"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+   <dd>
+    <a href="#hasIdentifier" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier">hasIdentifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"12"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#hasName" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName">hasName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Fira Barcelona"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="hotelHotelRoyalBarcelona">
+  <h3>hotel Hotel Royal Barcelona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelHotelRoyalBarcelona</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#BeachHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#availableAtCity" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity">availableAtCity</a> <sup class="type-op" title="object property">op</sup> <a href="#cityBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona">city Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasIdentifier" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier">hasIdentifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"9"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#hasName" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName">hasName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Hotel Royal Barcelona"</span>
+   </dd>
+   <dd>
+    <a href="#hasNightPrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasNightPrice">hasNightPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"252.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#hasRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating">hasRating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#hasStarRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating">hasStarRating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="hotelTest">
+  <h3>hotel Test<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hotelTest</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#LuxuryHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#LuxuryHotel">LuxuryHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating">hasRating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.6"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#hasStarRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating">hasStarRating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="pointBarcelona">
+  <h3>point Barcelona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#pointBarcelona</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Point" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Point">Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasLatitude" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLatitude">hasLatitude</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"41.3874"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#hasLongitude" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasLongitude">hasLongitude</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2.1686"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="restaurantRestaurantFusioBarcelona">
+  <h3>restaurant Restaurant Fusio Barcelona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#restaurantRestaurantFusioBarcelona</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MexicanRestaurant" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#MexicanRestaurant">MexicanRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#availableAtCity" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity">availableAtCity</a> <sup class="type-op" title="object property">op</sup> <a href="#cityBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona">city Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasAveragePrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice">hasAveragePrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"43.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#hasIdentifier" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier">hasIdentifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"43"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#hasName" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasName">hasName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Restaurant Fusió Barcelona"</span>
+   </dd>
+   <dd>
+    <a href="#hasRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating">hasRating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.8"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="transportBusBarcelona">
+  <h3>transport Bus Barcelona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#transportBusBarcelona</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#BusTransport" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#availableAtCity" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#availableAtCity">availableAtCity</a> <sup class="type-op" title="object property">op</sup> <a href="#cityBarcelona" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#cityBarcelona">city Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasAveragePrice" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasAveragePrice">hasAveragePrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"8.72"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#hasIdentifier" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasIdentifier">hasIdentifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"9"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#hasProvider" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasProvider">hasProvider</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Metro Barcelona"</span>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
+ <h3 id="swrlrules" class="list">SWRL rules</h3>
+ <ul class="hlist">
+  <li><a href="#d4e1529">isHighlyRatedRule</a></li>
+  <li><a href="#d4e1256">isntHighlyRatedRule</a></li>
+  <li><a href="#d4e1381">isTopHotelRule</a></li>
+ </ul>
+ <div class="entity" id="d4e1529">
+  <h3>isHighlyRatedRule<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>Defines if a TourismResource is highly rated by users<br><br><a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#hasRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating">hasRating</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual" title="greaterThanOrEqual">greaterThanOrEqual</a>(?) -&gt; <a href="#isHighlyRatedByUsers" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers">isHighlyRatedByUsers</a> <sup class="type-dp" title="data property">dp</sup>(?,"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
+ </div>
+ <div class="entity" id="d4e1256">
+  <h3>isntHighlyRatedRule<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>Defines if a TourismResource isn't highly rated by users<br><br><a href="#TourismResource" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#TourismResource">TourismResource</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#hasRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasRating">hasRating</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="http://www.w3.org/2003/11/swrlb#lessThan" title="lessThan">lessThan</a>(?) -&gt; <a href="#isHighlyRatedByUsers" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers">isHighlyRatedByUsers</a> <sup class="type-dp" title="data property">dp</sup>(?,"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
+ </div>
+ <div class="entity" id="d4e1381">
+  <h3>isTopHotelRule<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>Defines if a hotel is a Top Hotel<br><br><a href="#Hotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#isHighlyRatedByUsers" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isHighlyRatedByUsers">isHighlyRatedByUsers</a> <sup class="type-dp" title="data property">dp</sup>(?,"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>) , <a href="http://www.w3.org/2003/11/swrlb#equal" title="equal">equal</a>(?) , <a href="#hasStarRating" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#hasStarRating">hasStarRating</a> <sup class="type-dp" title="data property">dp</sup>(?,?) -&gt; <a href="#isTopHotel" title="http://www.semanticweb.org/hecto/ontologies/2025/3/IntelligentTourismOntology#isTopHotel">isTopHotel</a> <sup class="type-dp" title="data property">dp</sup>(?,"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
